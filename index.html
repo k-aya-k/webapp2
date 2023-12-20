@@ -4,43 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RunAwayFromCat</title>
     <link rel="stylesheet" href="./style.css">
+    <title>RunAwayFromCat</title>
 </head>
 
 <body>
-    <div class="top_box" id="top_box">
-        <div class="title_box">
-            <img src="./imgage/run.png" alt="cat" id="cat">
-            <div class="title_text" id="title_text">
-                <h1>Run Away</h1>
-                <h1>From Cat</h1>
+    <main>
+        <div class="top_box" id="top_box">
+            <div class="title_box">
+                <div class="titleArea">
+                    <img src="./imgage/run.png" alt="cat" id="cat">
+                    <div class="title_text" id="title_text">
+                        <h1>RunAway</h1>
+                        <h1>FromCat</h1>
+                    </div>
+                </div>
             </div>
-            <div class="start" id="start">
-                <button id="startBtn" onclick="startButton()">START</button>
+        </div>
+        
+        <div class="play_area" id="play_area">
+            <div class="timer_area" id="timer_area">
+                <p id="timer"></p>
+                <p id="timer_end"></p>
+            </div>
+            <div class="animation_area" id="animation_area">
+                <img src="./imgage/run.png" alt="runcat" id="runcat">
+                <img src="./imgage/runcat2.PNG" alt="runcat2" id="runcat2">
+                <img src="./imgage/catchi.png" alt="catch" id="runcat3">
+                <img src="./imgage/mouse_icon.PNG" alt="mouse" id="mouse">
+                <img src="./imgage/mouse2.PNG" alt="mouse2" id="mouse2">
+                <img src="./imgage/mouse3.png" alt="catchmouse" id="mouse3">
             </div>
         </div>
-    </div>
-    <div class="play_area" id="play_area">
-        <div class="timer_area" id="timer_area">
-            <p id="timer"></p>
-            <p id="timer_end"></p>
-        </div>
-        <div class="animation_area" id="animation_area">
-            <img src="./imgage/caution2.png" alt="caution" id="caution">
-            <img src="./imgage/run.png" alt="runcat" id="runcat">
-            <img src="./imgage/runcat2.PNG" alt="runcat2" id="runcat2">
-            <img src="./imgage/catchi.png" alt="catch" id="runcat3">
-            <img src="./imgage/mouse_icon.PNG" alt="mouse" id="mouse">
-            <img src="./imgage/mouse2.PNG" alt="mouse2" id="mouse2">
-            <img src="imgage/mouse3.PNG" alt="catchmouse" id="mouse3">
-        </div>
-    </div>
 
-    <div class="button_area" id="button_area">
-        <button id="topBtn" onclick="topButton()">JUMP</button>
-    </div>
+        <div class="start" id="start">
+            <button id="startBtn" onclick="startButton()">START</button>
+        </div>
 
+        <div class="button_area" id="button_area">
+            <button id="topBtn" onclick="topButton()">JUMP</button>
+        </div>
+    </main>
 
     <script src="./main.js"></script>
 </body>

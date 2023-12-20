@@ -35,6 +35,7 @@ const startButton = () => {
     animationArea.style.display = "none"
     topBox.style.display = "none";
     buttonArea.style.display ="flex";
+    startBox.style.display = "none";
     reset();
     timerStart();
     setTimeout(startGame, 5000);
@@ -57,6 +58,7 @@ const timerStart = () => {
                 attackMove();
             }, 1000);
         } if (timerCountDown == 0) {
+            successFlag = true;
             endGmame();
         }
     }
@@ -65,19 +67,17 @@ const timerStart = () => {
 const endGmame = () => {
     timerArea.classList.add('open');
     timerArea.style.backgroundImage = "url(./imgage/goal.jpg)";
-    timerEnd.textContent = "";
+    timerEnd.textContent = "GOAL!!";
+    timerEnd.style.fontSize = "10vw";
     timerArea.style.backgroundSize = "cover";
-    timerArea.style.backgroundPosition = "bottom";
+    timerArea.style.backgroundPosition = "right bottom";
     timer.style.display = "none";
     timerEnd.style.display = "block";
     animationArea.style.display = "none"
-    topBox.style.display = "flex";
+    topBox.style.display = "none";
     titleText.style.display = "none";
     titleImage.style.display = "none";
-    startBox.style.top = "64%";
-    startBox.style.right = "41%";
     buttonArea.style.display = "none";
-    successFlag = true;
     runcatPosition();
     notButton();
     setTimeout(activeButton, 5000);
@@ -95,15 +95,15 @@ const topButton = () => {
 };
 
 const mousePosition = () => {
-    mouse.style.top = "50%";
-    mouse2.style.top = "50%";
+    mouse.style.top = "75%";
+    mouse2.style.top = "75%";
 };
 
 const catAttack = () => {
     let num = Math.floor(Math.random() * 10);
     if (num == attackNum[num]) {
-        runcat.style.left = "50%";
-        runcat2.style.left = "50%";
+        runcat.style.left = "75%";
+        runcat2.style.left = "75%";
     }
 };
 
@@ -133,12 +133,14 @@ const attackMove = () => {
 const gameOver = () => {
     endGmame();
     timerEnd.textContent = "GAME OVER";
-    topBox.style.display = "flex";
+    timerEnd.style.fontSize = "10vw";
+    topBox.style.display = "none";
     titleText.style.display = "none";
     titleImage.style.display = "none";
     timerArea.style.backgroundImage = "url(./imgage/gameover.jpg)";
     timerArea.style.backgroundSize = "cover";
-    timerArea.style.backgroundPosition = "bottom";
+    timerArea.style.backgroundPosition = "right bottom";
+    successFlag = true;
 };
 
 const reset = () => {
@@ -160,6 +162,7 @@ const reset = () => {
 const notButton = () => {
     startBtn.disabled = true;
     startBtn.style.backgroundColor = "black";
+    startBox.style.display = "flex";
 };
 
 const activeButton = () => {
