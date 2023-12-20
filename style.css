@@ -208,3 +208,48 @@ p {
         opacity: 0;
     }
 }
+
+@media screen and (max-width:1000px){
+    .titleArea {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:650px){
+  .title_box {
+    height: 60vh;
+  }
+    
+}
+
+@media screen and (max-width:500px){
+    .title_box {
+        height: 50vh;
+      }    
+ 
+    #startBtn {
+    width: 150px;
+    height: 80px;
+    font-size: 4vh;
+ }
+
+ #mouse,
+ #mouse2,
+ #mouse3 {
+     width: 50px;
+
+ }
+
+
+ #runcat,
+ #runcat2,
+ #runcat3 {
+     width: 100px;
+     position: absolute;
+     top: 60%;
+     left: 9%;
+ }
+
+  }
